@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#323233"
+    tools:context=".CreateEvent">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/mtbJoin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@android:color/background_dark"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="Create Event"
+        app:titleTextColor="@android:color/holo_purple" />
+
+    <EditText
+        android:id="@+id/etCreateName"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="176dp"
+        android:layout_marginEnd="54dp"
+        android:background="#7C4563"
+        android:ems="10"
+        android:hint="Name..."
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:textColor="@color/material_dynamic_primary10"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etCreateDuration"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="70dp"
+        android:background="#7C4563"
+        android:ems="10"
+        android:hint="Duration (Min)..."
+        android:inputType="text"
+        android:paddingStart="20dp"
+        android:textColor="@color/material_dynamic_primary10"
+        app:layout_constraintBottom_toBottomOf="@+id/etCreateStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/etCreateName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etCreateDate"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="176dp"
+        android:background="#7C4563"
+        android:ems="10"
+        android:hint="Date..."
+        android:inputType="date"
+        android:paddingStart="20dp"
+        android:textColor="@color/material_dynamic_primary10"
+        app:layout_constraintBottom_toTopOf="@+id/btnBack"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/etCreateStart"
+        android:layout_width="0dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginBottom="70dp"
+        android:background="#7C4563"
+        android:ems="10"
+        android:hint="Start Time..."
+        android:inputType="time"
+        android:paddingStart="20dp"
+        android:textColor="@color/material_dynamic_primary10"
+        app:layout_constraintBottom_toBottomOf="@+id/etCreateDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etCreateName"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/btnCreate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="55dp"
+        android:layout_marginBottom="164dp"
+        android:text="Create"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:text="Cancel"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCreate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnCreate"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

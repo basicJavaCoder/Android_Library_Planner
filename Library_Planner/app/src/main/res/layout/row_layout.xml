@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp">
+
+    <TextView
+        android:id="@+id/txtMainName"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:text="Event Name"
+        android:textAlignment="center"
+        android:textColor="#48d1cc"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtMainStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtMainStart"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="37dp"
+        android:text="Event Start Time"
+        android:textAlignment="center"
+        android:textColor="#ff77ff"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/btMainRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMainName" />
+
+    <TextView
+        android:id="@+id/txtMainDuration"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="37dp"
+        android:text="Event Duration"
+        android:textAlignment="center"
+        android:textColor="#f984e5"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toStartOf="@+id/btMainRow"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMainStart" />
+
+    <TextView
+        android:id="@+id/txtMainDate"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:text="Event Date"
+        android:textAlignment="center"
+        android:textColor="#8bbe1b"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtMainDuration"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMainDuration" />
+
+    <Button
+        android:id="@+id/btMainRow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="27dp"
+        android:text="Actions"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txtMainDuration"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:background="#ba55d3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMainDate" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
