@@ -1,5 +1,6 @@
 package com.example.library_planner;
 
+import android.annotation.SuppressLint;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.content.Intent;
@@ -11,7 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class CreateEvent extends AppCompatActivity {
 
     EditText etName, etStart, etDuration, etDate;
-
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -31,8 +31,9 @@ public class CreateEvent extends AppCompatActivity {
 
             TimePickerDialog timePickerDialog = new TimePickerDialog(this, (view, hourOfDay, minute1) -> {
 
-                String fix_00 = String.format("%02d", minute1);
-                etStart.setText(hourOfDay + ":" + fix_00);
+                @SuppressLint("DefaultLocale") String fix_00 = String.format("%02d", minute1);
+                String current_date = hourOfDay + ":" + fix_00;
+                etStart.setText(current_date);
 
             }, hour, minute, true);
 
@@ -51,7 +52,10 @@ public class CreateEvent extends AppCompatActivity {
 
             DatePickerDialog datePickerDialog = new DatePickerDialog(
                     this,
-                    (view, year1, month1, dayOfMonth) -> etDate.setText(dayOfMonth + "/" + (month1 + 1) + "/" + year1),
+                    (view, year1, month1, dayOfMonth) -> {
+                        String current_date = dayOfMonth + "/" + (month1 + 1) + "/" + year1;
+                        etDate.setText(current_date);
+                    },
                     year, month, day);
 
             datePickerDialog.show();
