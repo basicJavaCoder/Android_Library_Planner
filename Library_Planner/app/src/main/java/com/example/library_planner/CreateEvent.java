@@ -35,7 +35,9 @@ public class CreateEvent extends AppCompatActivity {
                 String current_date = hourOfDay + ":" + fix_00;
                 etStart.setText(current_date);
 
-            }, hour, minute, true);
+                }, 
+                hour, minute, true
+            );
 
             timePickerDialog.show();
 
@@ -56,7 +58,8 @@ public class CreateEvent extends AppCompatActivity {
                         String current_date = dayOfMonth + "/" + (month1 + 1) + "/" + year1;
                         etDate.setText(current_date);
                     },
-                    year, month, day);
+                    year, month, day
+                );
 
             datePickerDialog.show();
 
